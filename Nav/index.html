@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>菜单导航</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.menu').mouseover(function(){
+				$(this).children('ul').show();
+			});
+
+			$('.menu').mouseout(function(){
+				$(this).children('ul').hide();
+			});
+		})
+	</script>
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li class="menu"><a href="#">课程大厅</a>
+				<ul>
+					<li><a href="#">javaScript</a></li>
+					<li><a href="#">jQuery</a></li>
+					<li><a href="#">DOM</a></li>
+					<li><a href="#">HTML DOM</a></li>
+					<li><a href="#">AJAX</a></li>
+				</ul>
+			</li>
+			<li class="menu"><a href="#">学习中心</a>
+				<ul>
+					<li><a href="#">javaScript</a></li>
+					<li><a href="#">jQuery</a></li>
+					<li><a href="#">DOM</a></li>
+					<li><a href="#">HTML DOM</a></li>
+					<li><a href="#">AJAX</a></li>
+				</ul>
+			</li>
+			<li class="menu"><a href="#">经典案例</a>
+				<ul>
+					<li><a href="#">javaScript</a></li>
+					<li><a href="#">jQuery</a></li>
+					<li><a href="#">DOM</a></li>
+					<li><a href="#">HTML DOM</a></li>
+					<li><a href="#">AJAX</a></li>
+				</ul>
+			</li>
+			<li class="menu"><a href="#">关于我们</a>
+				<ul>
+					<li><a href="#">javaScript</a></li>
+					<li><a href="#">jQuery</a></li>
+					<li><a href="#">DOM</a></li>
+					<li><a href="#">HTML DOM</a></li>
+					<li><a href="#">AJAX</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

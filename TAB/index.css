@@ -1,0 +1,30 @@
+.tab_btn{
+	width: 480px;
+	margin:200px auto 0;
+	overflow: hidden;
+}
+.tab_btn li{
+	float: left;
+	width: 160px;
+	height: 35px;
+	background: #ccc;
+	color: #222;
+	text-align: center;
+	line-height: 35px;
+}
+.tab_btn li.cur{background: #90f;}
+
+
+div{
+	width: 480px;
+	height: 260px;
+	display: none;
+	margin:0 auto 0;
+	background: #11ccd0;
+	text-align: center;
+}
+div p{
+	padding:10px 0;
+}
+.on{display: block;}
+

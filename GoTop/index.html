@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加过渡效果-返回顶部</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+	<style type="text/css">
+
+		/*返回顶部样式*/
+		#gotop{
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			display: block;
+			position: fixed;
+			left:50%;
+			bottom:30px;
+			margin-left:610px;
+			cursor: pointer;
+			background:red;
+			color: #fff;
+			text-align: center;
+			/*background: url(images/aaa.jpg) no-repeat; */
+		}
+	</style>
+</head>
+<body style="height:3000px;">
+	<!-- 返回顶部 -->
+	<span id="gotop">返顶</span>
+
+	<script type="text/javascript">
+	$(function(){
+
+		$('#gotop').hide();
+
+		$(function(){
+
+			var height = $(window).height();
+
+			$(window).scroll(function(){
+
+				if($(window).scrollTop() > height){
+
+					$('#gotop').fadeIn(500);
+				}
+				else{
+
+					$('#gotop').fadeOut(500);
+				}
+			});
+
+			$('#gotop').click(function(){
+
+				$('body,html').animate({scrollTop:0},800);
+
+				return false;
+			});
+		});
+	})
+	</script>
+</body>
+</html>

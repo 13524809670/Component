@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TAB选项卡</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css" />
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+	<ul class="tab_btn">
+		<li>One</li>
+		<li>Two</li>
+		<li class="cur">Three</li>
+	</ul>
+
+	<div>
+		<p>AAAAAAAA</p>
+		<p>AAAAAAAA</p>
+		<p>AAAAAAAA</p>
+	</div>
+	<div>
+		<p>BBBBBBBB</p>
+		<p>BBBBBBBB</p>
+		<p>BBBBBBBB</p>
+	</div>
+	<div class="on">
+		<p>CCCCCCCC</p>
+		<p>CCCCCCCC</p>
+		<p>CCCCCCCC</p>
+	</div>
+
+	<script type="text/javascript">
+
+		$(function(){
+
+			$('.tab_btn li').click(function(){
+
+				$('.tab_btn li').eq($(this).index()).addClass('cur').siblings().removeClass('cur');
+
+				$('div').hide().eq($(this).index()).show();
+			});
+		});
+		
+	</script>
+</body>
+</html>

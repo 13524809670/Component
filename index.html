@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3倒影效果</title>
+
+	<style type="text/css">
+		.box-reflect {
+			margin: 100px auto 0;
+			width: 1050px;
+		}
+		
+		/*倒影遮罩效果*/
+		/*.box-reflect img {
+		  -webkit-box-reflect: below 0 -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 30%,rgba(250,250,250,0.3));
+		  box-reflect: below 0 -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 30%,rgba(250,250,250,0.3));
+		}
+*/
+		/*右边倒影*/
+		.box-reflect .one{
+ 			-webkit-box-reflect: right 5px;
+			box-reflect: right 5px;
+		}
+
+		/*左边倒影*/
+		.box-reflect .two{
+			display: block;
+			margin:0 0 0 525px;
+			-webkit-box-reflect: left 5px;
+			box-reflect: left 5px;
+		}
+
+		/*底部倒影*/
+		.box-reflect .three {
+			display: block;
+			margin: 0 auto 400px;
+			-webkit-box-reflect: below 5px;
+			box-reflect: below 5px;
+
+		  -webkit-box-reflect: below 0 -webkit-linear-gradient(rgba(250,250,250,0), rgba(250,250,250,.0) 30%, rgba(250,250,250,0.5));
+		  box-reflect: below 0 -o-linear-gradient(rgba(250,250,250,0), rgba(250,250,250,.0) 30%, rgba(250,250,250,0.5));
+		  box-reflect: below 0 linear-gradient(rgba(250,250,250,0), rgba(250,250,250,.0) 30%, rgba(250,250,250,0.5));
+		}
+
+		/*顶部倒影*/
+		.box-reflect .four{
+			display: block;
+			margin: 230px auto ;
+			-webkit-box-reflect: above 5px;
+  			box-reflect: above 5px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="box-reflect">
+			<h2>右倒影,本图在左</h2>
+		<img src="images/01.jpg" alt="" height="200"/ class="one">
+
+			<h2>左倒影,本图再右</h2>
+		<img src="images/02.jpg" alt="" height="200"/ class="two">
+ 
+			<h2>底部倒影,本图在上</h2> 
+		<img src="images/03.jpg" alt="" height="200"/ class="three">
+
+			<h2>顶部倒影,本图在下</h2>
+		<img src="images/04.jpg" alt="" height="200"/ class="four">
+
+	</div>
+</body>
+</html>

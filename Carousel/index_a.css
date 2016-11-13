@@ -1,0 +1,86 @@
+.banner{
+	height: 620px;
+	position: relative;
+	overflow: hidden;
+	margin-top:150px;
+}
+/*图片样式*/
+.banner_img{
+	width: 1920px;
+	height: 620px;
+	position: absolute;
+	/*top:0;*/
+	left:50%;
+	margin-left: -960px;
+}
+.banner_img li{
+	position: absolute;
+	left:0;
+	top:0;
+	display: none;
+}
+.banner_img li.on{
+	display: block;
+}
+
+/*底部按钮样式*/
+.banner_btn{
+	width: 110px;
+	position: absolute;
+	bottom:10px;
+	left:50%;
+	margin-left: -30px;
+}
+.banner_btn li{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 10px;
+	background: url(../images/index_btn_06.png) no-repeat;
+	cursor: pointer;
+}
+.banner_btn li.cur{
+	background: url(../images/public_03.png) no-repeat;
+}
+
+/*左右按钮样式*/
+.prev,.next{
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	top:50%;
+	margin-top: -25px;
+	display: none;
+}
+.prev{
+	background: url(../images/prevArrow.png) no-repeat;
+	left:300px;
+}
+.next{
+	background: url(../images/nextArrow.png) no-repeat;
+	right:300px;
+}
+.banner:hover .prev,
+.banner:hover .next{
+	display: block;
+}
+
+
+/*方案(2)*/
+/*.prev,.next{
+	width: 56px;
+	height: 56px;
+	position: absolute;
+	top:50%;
+	margin-top: -25px;
+	display: none;
+	left:50%;
+}
+.prev{
+	background: url(../images/prevArrow.png) no-repeat;
+	margin-left: -600px;
+}
+.next{
+	background: url(../images/nextArrow.png) no-repeat;
+	margin-left: 600px;
+}*/

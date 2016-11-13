@@ -1,0 +1,40 @@
+#main{
+	width: 131px;
+	height: 143px;
+	position: fixed;
+	top:260px;
+	right:0px;
+}
+
+*html #main{
+	position: absolute;
+	/*margin-top:260px;*/
+	top:expression(eval(document.documentElement.scrollTop));
+}
+
+#main li{
+	width: 131px;
+	height: 60px;
+}
+#main li img{
+	float: right;
+}
+#main li a{
+	height: 49px;
+	display: block;
+	float: right;
+	min-width: 47px;
+	max-width:131px;
+}
+#main li a .show{display: block;}
+#main li a .hide{
+	margin-right: -143px;
+	cursor: pointer;
+	cursor: hand;
+}
+#main li a.hides .hide{
+	position: absolute;
+	right: 190px;
+	top:2px;
+	display: none;
+}

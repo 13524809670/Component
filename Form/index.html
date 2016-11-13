@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>input 聚焦 失焦 事件</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+	<h1>聚焦失焦实践案例</h1>
+	<form action="">
+		<input type="text" value="姓名" id="hide"><br/>
+
+		<input type="text" value="电话" id="show"><br/>
+
+		<textarea id="tip" cols="30" rows="8">留言</textarea>
+	</form>
+
+	<script type="text/javascript">
+
+		// 聚焦时
+		$('form #hide').focus(function(){
+
+			// 当前input的值为空
+			$(this).val('');
+		});
+
+		// 失焦时
+		$('form #hide').blur(function(){
+
+			// 如果当前 input 的值为空
+			if($(this).val() == ''){
+
+				// 那么当前的input 值是“姓名”
+				$(this).val('姓名');
+			}
+		});
+
+
+
+		$('form #show').focus(function(){
+
+			$(this).val('');
+		});
+
+		$('form #show').blur(function(){
+
+			if($(this).val() == ''){
+
+				$(this).val('电话');
+			}
+		});
+
+
+		$('form textarea').focus(function(){
+
+			$(this).val('');
+		});
+
+		$('form textarea').blur(function(){
+
+			if($(this).val() == ''){
+
+				$(this).val('留言');
+			}
+		});
+	</script>
+</body>
+</html>

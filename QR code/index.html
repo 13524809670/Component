@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二维码 生成</title>
+	<style type="text/css">
+		h2{
+			text-align: center;
+			margin-top: 200px;
+			font-size: 40px;
+		}
+		.demo{
+			width: 500px;
+			margin:30px auto;
+		}
+		p{
+			line-height: 30px;
+			
+			font-size: 30px;
+		}
+		p .input{
+			width: 300px;
+			height: 35px;
+			font-size: 23px;
+		}
+		p #btn{
+			width: 100px;
+			height:40px; 
+		}
+		#code{margin:50px 0 0 0;}
+	</style>
+
+
+
+	<script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.qrcode.min.js"></script>
+	
+</head>
+<body>
+	<h2>使用 jquery.qrcode 生成二维码</h2>
+	<div class="demo">
+
+		<p>输入内容后生成二维码</p>
+
+		<p>
+			<input type="text" class="input" id="text" value="">
+			<input type="submit" id="btn" value="提交">
+		</p>
+
+		<div id="code"></div>
+
+	</div>
+	
+	
+	<script type="text/javascript">
+
+		$(function(){
+
+			// 链接地址
+			var str = "http://www.jq22.com";
+
+			// 调用code的二维码链接地址及执行函数
+			$('#code').qrcode(str);
+
+			// 点击btn时
+			$('#btn').click(function(){
+
+				// code为空
+				$('#code').empty();
+
+				// 地址等于文本内的值
+				var str = toUtf8($('#text').val());
+
+				// code二维码提供表格，宽，高，链接地址
+				$('#code').qrcode({
+
+					render:'table',
+
+					width:300,
+
+					height:300,
+
+					text:str
+				});
+			});
+		})
+
+
+		// toUtf8执行函数
+		function toUtf8(str){
+
+			var out, i, len, c;
+
+			out = "";
+
+			len = str.length;   
+
+
+
+
+		    for(i = 0; i < len; i++){
+
+				c = str.charCodeAt(i);
+
+				if((c >= 0x0001) && (c <= 0x007f)){
+
+					out += str.charAt(i);
+				}
+				
+				else if(c > 0x07ff){
+
+					out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+
+					out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+
+					out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+				}
+				else{
+
+					out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+
+					out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+				}
+			}
+			return out;
+		} 
+	</script>
+</body>
+</html>

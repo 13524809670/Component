@@ -1,0 +1,72 @@
+/*背景遮罩样式*/
+.bgcolor{
+	background: rgba(255,255,255,0.5);
+	width: 100%;
+	height: 960px;
+	position: absolute;
+	top:0;
+	left:0;
+	display: none;
+	z-index: 10;
+}
+
+/*按钮样式*/
+.btn{
+	width: 450px;
+	height: 130px;
+	position: relative;
+	left:800px;
+	top:250px;
+	z-index: -20;
+}
+button{
+	width: 200px;
+	height: 45px;
+	margin:10px;
+	font-size: 20px;
+}
+
+
+/*content样式*/
+.wrap,.wrap_one{
+	width: 600px;
+	height: 210px;
+	text-align: center;
+	border-radius: 20px;
+	z-index: 30;
+	position: fixed;
+	top:380px;left:720px;
+	display: none;
+}
+.wrap .con_one h3,.wrap_one .con_two h3{
+	text-align: center;
+	color: red;
+	font-size: 30px;
+	padding-top: 20px;
+}
+.wrap .con_one p,.wrap_one .con_two p{
+	font-size: 20px;
+	margin-top: 20px;
+}
+.wrap .con_one{
+	width: 100%;
+	height: 160px;
+	border-radius: 10px 10px 0 0;
+	background: #f8f8f8;
+}
+.wrap .btn2{
+	width: 100%;
+	height: 50px;
+	font-size: 30px;
+	color: red;
+	border-radius: 0 0 10px 10px;
+	border:2px solid red;
+	border-top:none;
+	margin:0 auto;
+}
+.wrap_one .con_two{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	background: #f8f8f8;
+}

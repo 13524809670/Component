@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索引擎</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css" />
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="search">
+			<form action="http://www.baidu.com/s" target="_blank">
+
+				<input type="text" class="text" name="word" value="" placeholder="输入想要搜索的关键词" />
+
+				<input type="submit" class="submit" value="搜索">
+			</form>
+		</div>
+	</div>
+
+
+	<div class="txt">
+		<h2>结构思路：</h2>
+		<p>1.搜索框建议地址、域名、跨域访问</p>
+		<p>2.回调并追加目标数据</p>
+	</div>
+
+
+	<script type="text/javascript">
+
+			// input输入框的搜索建议
+		$('.search input[type="text"]').suggestion({
+
+			// 数据链接地址
+			url:'http://suggestion.baidu.com/su',
+
+			// 域名
+			FielName:'wd',
+
+			// 跨域访问
+			jsonp:'cd',
+
+			// 回调函数
+			callback:function(a){
+
+				// 变量data赋值 日期和秒数
+				var data = a['data']['s'];
+
+				// a目标为空
+				a.target.empty();
+
+				// i 等于 0，i 小于 data的长度，那么 i ++
+				for(var i = 0; i < data.length; i++){
+
+					// a目标追加 data[i]
+					a.target.append('<li>' + data[i] + '</li>');
+				}
+			}
+		});
+	</script>
+
+
+</body>
+</html>

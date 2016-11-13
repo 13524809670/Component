@@ -1,0 +1,28 @@
+.box{
+	width: 1200px;
+	height: 500px;
+	margin:200px auto 0;
+	position: relative;
+	overflow: hidden;
+}
+.box img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;left:0;
+}
+.mask{
+	width: 100%;
+	height: 100px;
+	color: #fff;
+	position: absolute;
+	left:0;
+	top:500px;
+	text-align: center;
+	font-size: 30px;
+	line-height: 100px;
+
+	/*兼容 IE8 且 背景透明字体正常【下拉遮罩的不二之选】*/
+	background: rgba(0,0,0,.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000); 
+}
